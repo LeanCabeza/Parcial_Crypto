@@ -1,0 +1,416 @@
+{
+	"info": {
+		"_postman_id": "3086e36e-ee86-41de-ab37-d0c782aedb49",
+		"name": "zSEGUNDO PARCIAL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "mail",
+							"value": "admin@admin.com",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:666/ParcialCrypto/autenticacion/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"ParcialCrypto",
+						"autenticacion",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ALTA CRYPTO",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzcwMTI4MDQsImV4cCI6MTYzNzAyNzIwNCwiZGF0YSI6IntcIklkXCI6MSxcIm1haWxcIjpcImFkbWluQGFkbWluLmNvbVwiLFwidGlwb1wiOlwiYWRtaW5cIn0iLCJhcHAiOiJTZWd1bmRvIFBhcmNpYWwgLSBMZWFuZHJvIENhYmV6YSJ9.VTCNNeVJ-DMY8UKdCul0mR1ZUn7xthiwkLGtVlkqrqM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "precio",
+							"value": "190000",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "dogecoin",
+							"type": "text"
+						},
+						{
+							"key": "nacionalidad",
+							"value": "boliviana",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"type": "file",
+							"src": "/C:/Users/leand/Desktop/Cosas de Lean/523521.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:666/ParcialCrypto/crypto/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"ParcialCrypto",
+						"crypto",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LISTAR CRYPTO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/ParcialCrypto/crypto/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"ParcialCrypto",
+						"crypto",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CRYPTO POR NACIONALIDAD",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/ParcialCrypto/crypto/argentina",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"ParcialCrypto",
+						"crypto",
+						"argentina"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crypto por ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzcwMTI4MDQsImV4cCI6MTYzNzAyNzIwNCwiZGF0YSI6IntcIklkXCI6MSxcIm1haWxcIjpcImFkbWluQGFkbWluLmNvbVwiLFwidGlwb1wiOlwiYWRtaW5cIn0iLCJhcHAiOiJTZWd1bmRvIFBhcmNpYWwgLSBMZWFuZHJvIENhYmV6YSJ9.VTCNNeVJ-DMY8UKdCul0mR1ZUn7xthiwkLGtVlkqrqM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/ParcialCrypto/crypto/listarPorId/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"ParcialCrypto",
+						"crypto",
+						"listarPorId",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ALTA VENTA",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzcwMTI4MDQsImV4cCI6MTYzNzAyNzIwNCwiZGF0YSI6IntcIklkXCI6MSxcIm1haWxcIjpcImFkbWluQGFkbWluLmNvbVwiLFwidGlwb1wiOlwiYWRtaW5cIn0iLCJhcHAiOiJTZWd1bmRvIFBhcmNpYWwgLSBMZWFuZHJvIENhYmV6YSJ9.VTCNNeVJ-DMY8UKdCul0mR1ZUn7xthiwkLGtVlkqrqM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id_cliente",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "id_crypto",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "cantidad",
+							"value": "500",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"type": "file",
+							"src": "/C:/Users/leand/Desktop/Cosas de Lean/523521.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:666/ParcialCrypto/ventas/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"ParcialCrypto",
+						"ventas",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VENTAS ALEMANAS",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzcwMTI4MDQsImV4cCI6MTYzNzAyNzIwNCwiZGF0YSI6IntcIklkXCI6MSxcIm1haWxcIjpcImFkbWluQGFkbWluLmNvbVwiLFwidGlwb1wiOlwiYWRtaW5cIn0iLCJhcHAiOiJTZWd1bmRvIFBhcmNpYWwgLSBMZWFuZHJvIENhYmV6YSJ9.VTCNNeVJ-DMY8UKdCul0mR1ZUn7xthiwkLGtVlkqrqM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/ParcialCrypto/ventas/ventasAlemanas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"ParcialCrypto",
+						"ventas",
+						"ventasAlemanas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USUARIOS QUE COMPRARON",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzcwMTI4MDQsImV4cCI6MTYzNzAyNzIwNCwiZGF0YSI6IntcIklkXCI6MSxcIm1haWxcIjpcImFkbWluQGFkbWluLmNvbVwiLFwidGlwb1wiOlwiYWRtaW5cIn0iLCJhcHAiOiJTZWd1bmRvIFBhcmNpYWwgLSBMZWFuZHJvIENhYmV6YSJ9.VTCNNeVJ-DMY8UKdCul0mR1ZUn7xthiwkLGtVlkqrqM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/ParcialCrypto/ventas/UsuariosQueCompraron/eterium",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"ParcialCrypto",
+						"ventas",
+						"UsuariosQueCompraron",
+						"eterium"
+					],
+					"query": [
+						{
+							"key": "hortaliza",
+							"value": "Zanahorias",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BORRAR CRYPTO POR ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzcwMTI4MDQsImV4cCI6MTYzNzAyNzIwNCwiZGF0YSI6IntcIklkXCI6MSxcIm1haWxcIjpcImFkbWluQGFkbWluLmNvbVwiLFwidGlwb1wiOlwiYWRtaW5cIn0iLCJhcHAiOiJTZWd1bmRvIFBhcmNpYWwgLSBMZWFuZHJvIENhYmV6YSJ9.VTCNNeVJ-DMY8UKdCul0mR1ZUn7xthiwkLGtVlkqrqM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/ParcialCrypto/crypto/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"ParcialCrypto",
+						"crypto",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MODIFICAR CRYPTO ADMIN",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzcwMTI4MDQsImV4cCI6MTYzNzAyNzIwNCwiZGF0YSI6IntcIklkXCI6MSxcIm1haWxcIjpcImFkbWluQGFkbWluLmNvbVwiLFwidGlwb1wiOlwiYWRtaW5cIn0iLCJhcHAiOiJTZWd1bmRvIFBhcmNpYWwgLSBMZWFuZHJvIENhYmV6YSJ9.VTCNNeVJ-DMY8UKdCul0mR1ZUn7xthiwkLGtVlkqrqM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "15000",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "bitcoin",
+							"type": "text"
+						},
+						{
+							"key": "nacionalidad",
+							"value": "argentina",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"type": "file",
+							"src": [
+								"/C:/Users/leand/Desktop/Yo.JPG"
+							]
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:666/ParcialCrypto/crypto/modificar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"ParcialCrypto",
+						"crypto",
+						"modificar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DESCARGAR PDF",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/Parcial2/ventas/pdf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"Parcial2",
+						"ventas",
+						"pdf"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
